@@ -1,0 +1,18 @@
+# Build directories
+bin/
+obj/
+
+# Visual Studio / Rider / VS Code settings
+.vs/
+.idea/
+.vscode/
+
+# User-specific files
+*.user
+*.suo
+
+# Build artifacts
+*.exe
+*.dll
+*.pdb
+

@@ -26,7 +26,7 @@ public class Circle : Shape
     }
 }
 
-class Rectangle : Shape
+public class Rectangle : Shape
 {
     public double Width { get; set; }
     public double Height { get; set; }
@@ -46,13 +46,13 @@ public class Program
 {
     public static void Main()
     {
-        Shape[] shapes = new Shape[]
-        {
+        Shape[] shapes =
+        [
             new Circle { Radius = 5 },
             new Circle { Radius = 10 },
             new Rectangle { Width = 4, Height = 6 },
             new Rectangle { Width = 10, Height = 20 },
-        };
+        ];
 
         foreach (var shape in shapes)
         {

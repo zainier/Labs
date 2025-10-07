@@ -27,7 +27,6 @@ public class Segment
 
     public double Length => Math.Sqrt(Math.Pow(B.X - A.X, 2) + Math.Pow(B.Y - A.Y, 2));
     public int TopY => Math.Max(A.Y, B.Y);
-
     public int BottomY => Math.Min(A.Y, B.Y);
 }
 

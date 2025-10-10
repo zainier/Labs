@@ -4,14 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        string? input = Console.ReadLine();
-
-        if (string.IsNullOrEmpty(input))
-        {
-            Console.WriteLine("Number of words: 0");
-            return;
-        }
-
+        string input = Console.ReadLine();
         int wordCount = 0;
         bool inWord = false;
 

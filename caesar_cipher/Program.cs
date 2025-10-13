@@ -26,19 +26,27 @@ public class CaesarCipher
 
     public static int BruteForce(string encrypted, string original)
     {
-        int iterations = 0;
-
-        for (int shift = 1; shift < 26; shift++)
+        if (encrypted.Length != original.Length)
         {
-            iterations++;
+            return -1;
+        }
 
-            if (Decrypt(encrypted, shift) == original)
+        for (int i = 0; i < encrypted.Length; i++)
+        {
+            char e = encrypted[i];
+            char o = original[i];
+
+            if (e >= 'a' && e <= 'z' && o >= 'a' && o <= 'z')
             {
-                return iterations;
+                int shift = (e - o + 26) % 26;
+
+                string attempt = Decrypt(encrypted, shift);
+
+                return attempt == original ? 1 : -1;
             }
         }
 
-        return -1;
+        return 0;
     }
 
     public static string Decrypt(string text, int shift)

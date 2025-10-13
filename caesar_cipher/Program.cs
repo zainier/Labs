@@ -23,6 +23,28 @@ public class CaesarCipher
 
         return result.ToString();
     }
+
+    public static int BruteForce(string encrypted, string original)
+    {
+        int iterations = 0;
+
+        for (int shift = 1; shift < 26; shift++)
+        {
+            iterations++;
+
+            if (Decrypt(encrypted, shift) == original)
+            {
+                return iterations;
+            }
+        }
+
+        return -1;
+    }
+
+    public static string Decrypt(string text, int shift)
+    {
+        return Encrypt(text, 26 - shift);
+    }
 }
 
 public class Program
@@ -36,9 +58,12 @@ public class Program
         int shift = random.Next(1, 26);
 
         string encryptedText = CaesarCipher.Encrypt(text, shift);
-        
+
         Console.WriteLine($"Random shift value: {shift}");
         Console.WriteLine($"Encrypted text: {encryptedText}");
+
+        int iterations = CaesarCipher.BruteForce(encryptedText, text);
+        Console.WriteLine($"Number of iterations: {iterations}");
     }
 }
 

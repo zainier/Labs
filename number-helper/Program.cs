@@ -21,79 +21,80 @@
     }
 }
 
-    public class NumberHelper
+public class NumberHelper
+{
+    public bool TryParseInt(string input, out int value)
     {
-        public bool TryParseInt(string input, out int value)
+        value = 0;
+
+        for (int i = 0; i < input.Length; i++)
         {
-            value = 0;
+            char character = input[i];
+            int digit = -1;
 
-            for (int i = 0; i < input.Length; i++)
+            switch (character)
             {
-                char character = input[i];
-                int digit = -1;
-
-                switch (character)
-                {
-                    case '0':
-                        digit = 0;
-                        break;
-                    case '1':
-                        digit = 1;
-                        break;
-                    case '2':
-                        digit = 2;
-                        break;
-                    case '3':
-                        digit = 3;
-                        break;
-                    case '4':
-                        digit = 4;
-                        break;
-                    case '5':
-                        digit = 5;
-                        break;
-                    case '6':
-                        digit = 6;
-                        break;
-                    case '7':
-                        digit = 7;
-                        break;
-                    case '8':
-                        digit = 8;
-                        break;
-                    case '9':
-                        digit = 9;
-                        break;
-                    default:
-                        return false;
-                }
-
-                value = value * 10 + digit;
+                case '0':
+                    digit = 0;
+                    break;
+                case '1':
+                    digit = 1;
+                    break;
+                case '2':
+                    digit = 2;
+                    break;
+                case '3':
+                    digit = 3;
+                    break;
+                case '4':
+                    digit = 4;
+                    break;
+                case '5':
+                    digit = 5;
+                    break;
+                case '6':
+                    digit = 6;
+                    break;
+                case '7':
+                    digit = 7;
+                    break;
+                case '8':
+                    digit = 8;
+                    break;
+                case '9':
+                    digit = 9;
+                    break;
+                default:
+                    value = 0;
+                    return false;
             }
 
-            return true;
+            value = value * 10 + digit;
         }
 
-        public int BankersRounding(float num)
-        {
-            int wholePart = (int)num;
-            float decimalPart = Math.Abs(num - wholePart);
-
-            if (decimalPart > 0.5)
-            {
-                return wholePart + 1;
-            }
-
-            if (decimalPart < 0.5)
-            {
-                return wholePart;
-            }
-
-            if (wholePart % 2 == 0)
-            {
-                return wholePart;
-            }
-
-            return num < 0 ? wholePart - 1 : wholePart + 1;
-        }
+        return true;
     }
+
+    public int BankersRounding(float num)
+    {
+        int wholePart = (int)num;
+        float decimalPart = Math.Abs(num - wholePart);
+
+        if (decimalPart > 0.5)
+        {
+            return wholePart + 1;
+        }
+
+        if (decimalPart < 0.5)
+        {
+            return wholePart;
+        }
+
+        if (wholePart % 2 == 0)
+        {
+            return wholePart;
+        }
+
+        return num < 0 ? wholePart - 1 : wholePart + 1;
+    }
+}

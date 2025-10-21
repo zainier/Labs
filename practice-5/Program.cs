@@ -1,6 +1,6 @@
 ﻿class Car
 {
-    public int Speed { get; set; }
+    public int Speed { get; private set; }
 
     public void SpeedUp()
     {

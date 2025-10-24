@@ -9,7 +9,7 @@
 
     public void SlowDown()
     {
-        Speed -= 10;
+        Speed = Speed - 10 < 0 ? 0 : Speed - 10;
     }
 }
 

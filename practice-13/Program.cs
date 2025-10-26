@@ -13,6 +13,7 @@ class Expression
 class LongExpression : Expression
 {
     public int Length { get; }
+    
     public LongExpression(string value) : base(value)
     {
         Length = value.Length;

@@ -38,3 +38,21 @@
         return hash % _table.Length;
     }
 }
+
+public class HashTableTest
+{
+    public static void Main(string[] args)
+    {
+        HashTable hashTable = new HashTable(10);
+
+        // Test adding elements
+        Console.WriteLine(hashTable.Add("apple"));  // True
+        Console.WriteLine(hashTable.Add("banana")); // True
+        Console.WriteLine(hashTable.Add("apple"));  // False (duplicate)
+
+        // Test contains method
+        Console.WriteLine(hashTable.Contains("apple"));  // True
+        Console.WriteLine(hashTable.Contains("banana")); // True
+        Console.WriteLine(hashTable.Contains("cherry")); // False
+    }
+}

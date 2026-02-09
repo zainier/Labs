@@ -8,7 +8,6 @@
     }
 }
 
-
 public class Book: ICloneable
 {
     public string Title { get; set; }

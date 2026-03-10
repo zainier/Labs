@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk"></html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Робота з списками</title>
+</head>
+<body>
+    <h1>Ненумерований список</h1>
+    <ul class="unordered-list">
+        <li class="unordered-list__item">Елемент 1</li>
+        <li class="unordered-list__item">Елемент 2</li>
+        <li class="unordered-list__item">Елемент 3</li>
+    </ul>
+
+    <h1>Нумерований список</h1>
+    <ol>
+        <li>Перший елемент</li>
+        <li>Другий елемент</li>
+        <li>Третій елемент</li>
+    </ol>
+
+    <h1>Багаторівневий список</h1>
+    <ol class="multiordered-list">
+        <li>
+            Перша категорія
+            <ol class="multiordered-list__sublist">
+                <li>Підкатегорія a</li>
+                <li>Підкатегорія b</li>
+            </ol>
+        </li>
+        <li>Друга категорія</li>
+    </ol>
+
+    <dl class="definition-list">
+        <dt class="definition-list__term">HTML</dt>
+        <dd class="definition-list__description">Мова розмітки веб-сторінок</dd>
+        <dt class="definition-list__term">CSS</dt>
+        <dd class="definition-list__description">Мова стилів для веб-сторінок</dd>
+    </dl>
+</body>
+</html>

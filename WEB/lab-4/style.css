@@ -1,0 +1,28 @@
+.unordered-list {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.unordered-list__item {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgb(124, 169, 193);
+}
+
+.multiordered-list {
+    list-style-type: upper-roman;
+}
+
+.multiordered-list__sublist {
+    list-style-type: lower-alpha;
+}
+
+.definition-list__term {
+    font-weight: bold;
+    color: rgb(5, 5, 148);
+}
+
+.definition-list__description {
+    font-style: italic;
+}

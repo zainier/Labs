@@ -1,0 +1,37 @@
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:active {
+    color: green;
+}
+
+.navigation {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navigation__item {
+    padding: 0 10px;
+    border-right: 1px solid #000;
+}
+
+.navigation__item:first-child {
+    padding-left: 0;
+}
+
+.navigation__item:last-child {
+    padding-right: 0;
+    border-right: none;
+}

@@ -106,19 +106,19 @@ class Program
         Console.WriteLine("Provide text:");
         string text = Console.ReadLine();   
 
-        TextBoxBase textBox1 = new TextBoxLeftAligned();
-        textBox1.Width = width;
-        textBox1.Text = text;
-        textBox1.Draw();
+        TextBoxBase textBoxLeftAligned = new TextBoxLeftAligned();
+        textBoxLeftAligned.Width = width;
+        textBoxLeftAligned.Text = text;
+        textBoxLeftAligned.Draw();
 
-        TextBoxBase textBox2 = new TextBoxRightAligned();
-        textBox2.Width = width;
-        textBox2.Text = text;
-        textBox2.Draw();
+        TextBoxBase textBoxRightAligned = new TextBoxRightAligned();
+        textBoxRightAligned.Width = width;
+        textBoxRightAligned.Text = text;
+        textBoxRightAligned.Draw();
 
-        TextBoxBase textBox3 = new TextBoxCenterAligned();
-        textBox3.Width = width;
-        textBox3.Text = text;
-        textBox3.Draw();
+        TextBoxBase textBoxCenterAligned = new TextBoxCenterAligned();
+        textBoxCenterAligned.Width = width;
+        textBoxCenterAligned.Text = text;
+        textBoxCenterAligned.Draw();
     }
 }      

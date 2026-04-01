@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Робота з таблицями</title>
+</head>
+<body>
+    <table class="schedule-table">
+        <caption class="schedule-table__caption">Розклад занять</caption>
+        <thead class="schedule-table__header">
+            <tr>
+                <th class="schedule-table__header-day" rowspan="2">День</th>
+                <th colspan="2">Час</th>
+                <th class="schedule-table__header-subject" rowspan="2">Предмет</th>
+                <th class="schedule-table__header-audience" rowspan="2">Аудиторія</th>
+            </tr>
+            <tr>
+                <th class="schedule-table__header-start">Початок</th>
+                <th class="schedule-table__header-end">Кінець</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Понеділок</td>
+                <td>08:00</td>
+                <td>09:30</td>
+                <td>Математика</td>
+                <td>101</td>
+            </tr>
+            <tr>
+                <td>09:40</td>
+                <td>11:10</td>
+                <td>Фізика</td>
+                <td>202</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Вівторок</td>
+                <td>08:00</td>
+                <td>09:30</td>
+                <td>Інформатика</td>
+                <td>303</td>
+            </tr>
+            <tr>
+                <td>09:40</td>
+                <td>11:10</td>
+                <td>Хімія</td>
+                <td>404</td>
+            </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;   
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.schedule-table {
+    width: 60%;
+}
+
+.schedule-table__caption {
+    caption-side: top;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.schedule-table__header-day {
+    width: 128px;
+}
+
+.schedule-table__header-start, .schedule-table__header-end {
+    width: 100px;
+}
+
+.schedule-table__header-subject {
+    min-width: 160px;
+    width: auto;
+}
+
+.schedule-table__header-audience {
+    width: 100px;
+}

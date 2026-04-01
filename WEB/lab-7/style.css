@@ -39,7 +39,8 @@ tbody tr:nth-child(odd) {
     width: 128px;
 }
 
-.schedule-table__header-start, .schedule-table__header-end {
+.schedule-table__header-start, 
+.schedule-table__header-end {
     width: 100px;
 }
 

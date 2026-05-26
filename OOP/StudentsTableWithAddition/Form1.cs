@@ -56,7 +56,7 @@ namespace StudentsTable
             return students.Count == 0 ? 1 : students.Max(student => student.Id) + 1;
         }
 
-        private static Bitmap CreateAddIcon()
+        private Bitmap CreateAddIcon()
         {
             Bitmap bitmap = new Bitmap(16, 16);
 

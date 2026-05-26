@@ -50,7 +50,7 @@
             dataGridView1.Size = new Size(830, 450);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // define columns (set properties via designer code)
+            // define columns
             // Id column
             colId.DataPropertyName = "Id";
             colId.HeaderText = "ІД";

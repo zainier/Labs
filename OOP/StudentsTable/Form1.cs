@@ -14,8 +14,6 @@ namespace StudentsTable
             dataGridView1.DataSource = students;
         }
 
-        
-
         private List<Student> BuildStudentList()
         {
             return new List<Student>

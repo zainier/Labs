@@ -41,7 +41,7 @@ function testCalculateAverage(studentGrades) {
 const validGrades = [85, 90, 78, 92, 88];
 testCalculateAverage(validGrades);
 
-// 2. Некоректний тип елемента (приклад із завдання)
+// 2. Некоректний тип елемента (не число)
 const nonNumberGrades = [85, 90, 78, 92, 88, 'A'];
 testCalculateAverage(nonNumberGrades);
 

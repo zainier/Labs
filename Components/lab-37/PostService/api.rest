@@ -1,0 +1,72 @@
+### GET all postings
+GET http://localhost:8080/postings
+
+
+### GET posting by ID
+GET http://localhost:8080/postings/1
+
+
+### GET non-existent posting
+GET http://localhost:8080/postings/999
+
+
+### POST create a new posting
+POST http://localhost:8080/postings
+Content-Type: application/json
+
+{
+  "from": "John",
+  "to": "Jane",
+  "content": "Laptop",
+  "deliveryType": "Courier",
+  "weight": 2.5,
+  "width": 30,
+  "height": 20,
+  "depth": 10,
+  "value": 1000,
+  "price": 25
+}
+
+
+### PUT update an existing posting
+PUT http://localhost:8080/postings/1
+Content-Type: application/json
+
+{
+  "from": "Alice Updated",
+  "to": "Bob Updated",
+  "content": "Updated Books",
+  "deliveryType": "ExpressCourier",
+  "weight": 3.0,
+  "width": 35,
+  "height": 25,
+  "depth": 15,
+  "value": 75,
+  "price": 20
+}
+
+
+### PUT non-existent posting
+PUT http://localhost:8080/postings/999
+Content-Type: application/json
+
+{
+  "from": "Nobody",
+  "to": "Nobody",
+  "content": "Test",
+  "deliveryType": "Department",
+  "weight": 1.0,
+  "width": 10,
+  "height": 10,
+  "depth": 10,
+  "value": 10,
+  "price": 5
+}
+
+
+### DELETE posting
+DELETE http://localhost:8080/postings/2
+
+
+### DELETE non-existent posting
+DELETE http://localhost:8080/postings/999

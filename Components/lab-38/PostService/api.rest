@@ -1,0 +1,64 @@
+### 1. GET all postings
+GET http://localhost:8080/postings
+
+
+### 2. GET existing posting
+GET http://localhost:8080/postings/1
+
+
+### 3. GET non-existing posting
+GET http://localhost:8080/postings/999
+
+
+### 4. CREATE a new posting
+POST http://localhost:8080/postings
+Content-Type: application/json
+
+{
+  "from": "John",
+  "to": "Jane",
+  "content": "Laptop",
+  "deliveryType": "Courier",
+  "weight": 2.5,
+  "width": 30,
+  "height": 20,
+  "depth": 10,
+  "value": 1000,
+  "price": 25
+}
+
+
+### 5. GET the newly created posting
+# The new posting should have Id = 4
+GET http://localhost:8080/postings/4
+
+
+### 6. UPDATE the same posting
+PUT http://localhost:8080/postings/4
+Content-Type: application/json
+
+{
+  "from": "John Updated",
+  "to": "Jane Updated",
+  "content": "Updated Laptop",
+  "deliveryType": "ExpressCourier",
+  "weight": 3.0,
+  "width": 35,
+  "height": 25,
+  "depth": 15,
+  "value": 1200,
+  "price": 30
+}
+
+
+### 7. GET the updated posting
+GET http://localhost:8080/postings/4
+
+
+### 8. DELETE the same posting
+DELETE http://localhost:8080/postings/4
+
+
+### 9. GET the deleted posting
+# Expected: 404 Not Found
+GET http://localhost:8080/postings/4

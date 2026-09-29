@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор суми з історією операцій</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 420px;
+            margin: 40px auto;
+            padding: 0 16px;
+            color: #222;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        .calc {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 18px;
+        }
+
+        input {
+            width: 70px;
+            padding: 6px 8px;
+            font-size: 16px;
+            border: 1px solid #999;
+            border-radius: 4px;
+        }
+
+        #result {
+            min-width: 40px;
+            font-weight: bold;
+        }
+
+        #calculate {
+            margin-top: 14px;
+            padding: 8px 18px;
+            font-size: 16px;
+            color: #fff;
+            background: #2d7ff9;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #calculate:hover {
+            background: #1c6ae0;
+        }
+
+        #history {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px 16px;
+            margin-top: 10px;
+            list-style: none;
+        }
+
+        #history li {
+            padding: 4px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        #history li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Калькулятор суми</h1>
+
+    <div class="calc">
+        <input type="number" id="value1">
+        <span>+</span>
+        <input type="number" id="value2">
+        <span>=</span>
+        <span id="result">0</span>
+    </div>
+
+    <button id="calculate" onclick="calculate()">Порахувати</button>
+
+    <h2>Історія</h2>
+    <ul id="history"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>

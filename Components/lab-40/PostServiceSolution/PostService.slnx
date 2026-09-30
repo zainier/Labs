@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/00-Common/">
+    <Project Path="PostService.CommonTypes/PostService.CommonTypes.csproj" />
+  </Folder>
+  <Folder Name="/02-BusinessLogic/">
+    <Project Path="PostService.BusinessLogic/PostService.BusinessLogic.csproj" />
+    <Project Path="PostService.Models/PostService.Models.csproj" />
+  </Folder>
+  <Folder Name="/03-Application/">
+    <Project Path="PostService.Dtos/PostService.Dtos.csproj" />
+    <Project Path="PostService/PostService.csproj" />
+  </Folder>
+</Solution>

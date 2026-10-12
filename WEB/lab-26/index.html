@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список відправлень</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 16px;
+            color: #222;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        #status {
+            font-style: italic;
+            color: #555;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #999;
+            padding: 6px 10px;
+            text-align: left;
+        }
+
+        thead th {
+            background: #f0f0f0;
+        }
+
+        td.number,
+        th.number {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Список відправлень</h1>
+
+    <p id="status">Завантаження відправлень…</p>
+
+    <table>
+        <thead id="table-header">
+            <tr>
+                <th scope="col" x-column="content">Вміст</th>
+                <th scope="col" x-column="from">Відправник</th>
+                <th scope="col" x-column="to">Одержувач</th>
+                <th scope="col" class="number" x-column="weight">Вага, кг</th>
+                <th scope="col" class="number" x-column="width">Ширина, см</th>
+                <th scope="col" class="number" x-column="depth">Довжина, см</th>
+                <th scope="col" x-column="deliveryType">Тип доставки</th>
+                <th scope="col" class="number" x-column="value">Оголошена вартість</th>
+                <th scope="col" class="number" x-column="price">Ціна доставки</th>
+            </tr>
+        </thead>
+        <tbody id="postings">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

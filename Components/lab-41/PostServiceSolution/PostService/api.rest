@@ -1,0 +1,52 @@
+### 1. Get all postings
+GET http://localhost:8080/postings
+
+### 2. Get non-existent posting
+GET http://localhost:8080/postings/999
+
+### 3. Create posting
+### Price is calculated by the service.
+POST http://localhost:8080/postings
+Content-Type: application/json
+
+{
+  "from": "Alice",
+  "to": "Bob",
+  "content": "Books",
+  "deliveryType": "Courier",
+  "weight": 2.5,
+  "width": 30,
+  "height": 20,
+  "depth": 10,
+  "value": 50
+}
+
+### 4. Get created posting
+GET http://localhost:8080/postings/1
+
+### 5. Update posting
+PUT http://localhost:8080/postings/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "from": "Alice Updated",
+  "to": "Bob Updated",
+  "content": "Updated Books",
+  "deliveryType": "ExpressCourier",
+  "weight": 3,
+  "width": 35,
+  "height": 25,
+  "depth": 15,
+  "value": 75,
+  "price": 100
+}
+
+### 6. Get updated posting
+GET http://localhost:8080/postings/1
+
+### 7. Delete posting
+DELETE http://localhost:8080/postings/1
+
+### 8. Verify deletion
+GET http://localhost:8080/postings/1

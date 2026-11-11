@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PostService — Відправлення</title>
+    <link rel="stylesheet" href="css/site.css">
+    <script type="module" src="js/posting-edit.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">PostService</a>
+        <button class="menu-toggle" type="button" aria-label="Меню" aria-expanded="false">&#9776;</button>
+        <nav class="site-nav">
+            <a href="postings.html" aria-current="page">Список відправлень</a>
+            <a href="about.html">Про програму</a>
+        </nav>
+    </header>
+
+    <main class="page">
+        <h1 id="page-title" class="form-title">Нове відправлення</h1>
+
+        <div class="alert" id="alert" role="alert" hidden></div>
+
+        <form class="form" id="posting-form" novalidate>
+            <div class="field" data-field="from">
+                <label for="from">Відправник *</label>
+                <div class="control">
+                    <input id="from" name="from" type="text" autocomplete="off">
+                    <p class="error" id="from-error" hidden></p>
+                </div>
+            </div>
+
+            <div class="field" data-field="to">
+                <label for="to">Отримувач *</label>
+                <div class="control">
+                    <input id="to" name="to" type="text" autocomplete="off">
+                    <p class="error" id="to-error" hidden></p>
+                </div>
+            </div>
+
+            <div class="field" data-field="content">
+                <label for="content">Вміст *</label>
+                <div class="control">
+                    <input id="content" name="content" type="text" autocomplete="off">
+                    <p class="error" id="content-error" hidden></p>
+                </div>
+            </div>
+
+            <div class="field" data-field="deliveryType">
+                <label for="deliveryType">Тип доставки *</label>
+                <div class="control">
+                    <select id="deliveryType" name="deliveryType">
+                        <option value="">Оберіть тип доставки</option>
+                        <option value="Department">Відділення</option>
+                        <option value="Courier">Кур'єр</option>
+                        <option value="ExpressCourier">Експрес-кур'єр</option>
+                    </select>
+                    <p class="error" id="deliveryType-error" hidden></p>
+                </div>
+            </div>
+
+            <div class="field" data-field="weight">
+                <label for="weight">Вага, кг *</label>
+                <div class="control">
+                    <input id="weight" name="weight" type="text" inputmode="decimal" autocomplete="off">
+                    <p class="error" id="weight-error" hidden></p>
+                </div>
+            </div>
+
+            <div class="field" data-field="value">
+                <label for="value">Оголошена цінність, грн</label>
+                <div class="control">
+                    <input id="value" name="value" type="text" inputmode="decimal" autocomplete="off">
+                    <p class="error" id="value-error" hidden></p>
+                </div>
+            </div>
+
+            <div class="row3">
+                <div class="field" data-field="width">
+                    <label for="width">Ширина, см *</label>
+                    <div class="control">
+                        <input id="width" name="width" type="text" inputmode="decimal" autocomplete="off">
+                        <p class="error" id="width-error" hidden></p>
+                    </div>
+                </div>
+                <div class="field" data-field="height">
+                    <label for="height">Висота, см *</label>
+                    <div class="control">
+                        <input id="height" name="height" type="text" inputmode="decimal" autocomplete="off">
+                        <p class="error" id="height-error" hidden></p>
+                    </div>
+                </div>
+                <div class="field" data-field="depth">
+                    <label for="depth">Глибина, см *</label>
+                    <div class="control">
+                        <input id="depth" name="depth" type="text" inputmode="decimal" autocomplete="off">
+                        <p class="error" id="depth-error" hidden></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="price">Вартість, грн</label>
+                <div class="control">
+                    <input id="price" type="text" value="—" readonly tabindex="-1">
+                </div>
+            </div>
+            <p class="hint">Вартість обчислюється автоматично за вагою і типом доставки.</p>
+
+            <div class="form-actions">
+                <button class="btn primary" type="submit" id="save-button">Зберегти</button>
+                <a class="btn" href="postings.html">Скасувати</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

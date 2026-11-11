@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редагування відправлення</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html">PostService</a>
+    </header>
+
+    <main>
+        <h1>Редагування поштового відправлення</h1>
+
+        <div class="alert" id="alert" hidden></div>
+
+        <form id="posting-form" novalidate>
+            <div class="form-field">
+                <label for="from">Відправник</label>
+                <input type="text" id="from" name="from">
+                <span class="error" id="from-error" hidden></span>
+            </div>
+
+            <div class="form-field">
+                <label for="to">Отримувач</label>
+                <input type="text" id="to" name="to">
+                <span class="error" id="to-error" hidden></span>
+            </div>
+
+            <div class="form-field">
+                <label for="content">Вміст</label>
+                <input type="text" id="content" name="content">
+                <span class="error" id="content-error" hidden></span>
+            </div>
+
+            <div class="form-field">
+                <label for="deliveryType">Тип доставки</label>
+                <select id="deliveryType" name="deliveryType">
+                    <option value="">Оберіть тип доставки</option>
+                    <option value="Department">Відділення</option>
+                    <option value="Courier">Кур'єр</option>
+                    <option value="ExpressCourier">Експрес-кур'єр</option>
+                </select>
+                <span class="error" id="deliveryType-error" hidden></span>
+            </div>
+
+            <div class="form-field">
+                <label for="weight">Вага, кг</label>
+                <input type="number" id="weight" name="weight" step="any">
+                <span class="error" id="weight-error" hidden></span>
+            </div>
+
+            <div class="form-field">
+                <label for="width">Ширина, см</label>
+                <input type="number" id="width" name="width" step="any">
+                <span class="error" id="width-error" hidden></span>
+            </div>
+
+            <div class="form-field">
+                <label for="height">Висота, см</label>
+                <input type="number" id="height" name="height" step="any">
+                <span class="error" id="height-error" hidden></span>
+            </div>
+
+            <div class="form-field">
+                <label for="depth">Глибина, см</label>
+                <input type="number" id="depth" name="depth" step="any">
+                <span class="error" id="depth-error" hidden></span>
+            </div>
+
+            <div class="form-field">
+                <label for="value">Оголошена цінність, грн</label>
+                <input type="number" id="value" name="value" step="any">
+                <span class="error" id="value-error" hidden></span>
+            </div>
+
+            <div class="form-buttons">
+                <button type="button" class="primary" id="save-button" disabled>Зберегти</button>
+                <button type="button" id="cancel-button">Скасувати</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="edit.js"></script>
+</body>
+</html>
